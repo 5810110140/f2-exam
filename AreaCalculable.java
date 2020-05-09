@@ -1,3 +1,3 @@
-public class AreaCalculable {
-    
+public interface AreaCalculable {
+    double getArea();
 }

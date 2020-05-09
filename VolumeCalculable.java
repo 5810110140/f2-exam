@@ -1,3 +1,3 @@
-public class VolumeCalculable {
-    
+public interface VolumeCalculable {
+    double getVolume();
 }
