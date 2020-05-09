@@ -1,19 +1,17 @@
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.awt.BorderLayout;
+import java.util.Scanner;
 import java.awt.GridLayout;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-class MainFrame extends JFrame  {
-    private JTextField textField;
-
+public class MainFrame    {
+   // private JTextField textField;
     public static void main(String[] args){
 
         try{
@@ -27,48 +25,65 @@ class MainFrame extends JFrame  {
         }catch(FileNotFoundException e){
             System.out.println("Can't Read file");
             e.printStackTrace();
-        }
+        }   
 
-
-
-        JFrame frame =  new JFrame("CalcuApp");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 400);
-        
-
-        JPanel panel = new JPanel();
-        GridLayout layout = new GridLayout(0,3);
-
-        panel.setLayout(layout);
-
-        JButton btn_2d = new JButton("2D");
-        frame.add(btn_2d);
-        btn_2d.setBounds(50, 100, 95, 30);
-
-        JButton btn_3d = new JButton("3D");
-        frame.add(btn_3d);
-        btn_3d.setBounds(50, 150, 95, 30);
-
-        JButton btn_all = new JButton("All");
-        frame.add(btn_all);
-        btn_all.setBounds(50, 200, 95, 30);
-
-        frame.getContentPane().setLayout(new BorderLayout());
-
-        JTextField textField = new JTextField();
-
-        textField.setFont(textField.getFont().deriveFont(30.0f));
-        frame.add(textField,BorderLayout.PAGE_END);
-
-        frame.setVisible(true);
-
-    
-
+        MyFrame frame = new MyFrame("MyProgram");
+         frame.setSize(800,600);
+         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);}
 
     }
     
-    
-    
-    
-    
+class MyFrame extends JFrame{
+    private JLabel label;
+
+    public MyFrame(String title){
+        super(title);
+
+        GridLayout layout = new GridLayout(3,3);
+        //layout.setHgap(5);
+       // layout.setVgap(2);
+
+   
+        JButton btn_1 = new JButton("2D");
+        this.add(btn_1,BorderLayout.EAST);
+        btn_1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+              
+            }
+        });
+
+        JButton btn_2 = new JButton("3D");
+        btn_2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+            
+            }
+        });
+
+        JButton btn_3 = new JButton("All ");
+        btn_3.setSize(50, 50);
+        btn_3.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+              
+            }
+        });
+
+        JTextField textField = new JTextField();
+        textField.setFont(textField.getFont().deriveFont(20.0f));
+        this.add(textField,BorderLayout.PAGE_START);
+        this.getContentPane().setLayout(layout);
+
+        this.add(btn_1);
+        this.add(btn_2);
+        this.add(btn_3);
+        
+    }    
 }
+
+   
+
+    
+    
+    
+    
+    

@@ -2,10 +2,8 @@ public abstract class Sprite {
     private String name;
     protected double x;
     protected double y;
-    
 
-    public Sprite(String name){
-        this.name = name;
+    public Sprite(String name) {
         x = 0;
         y = 0;
     }
@@ -20,7 +18,9 @@ public abstract class Sprite {
         this.x = x;
         this.y = y;
     }
+
     public String getName(){
         return name;
     }
+    
 }

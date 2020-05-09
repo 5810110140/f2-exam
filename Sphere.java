@@ -27,8 +27,5 @@ public class Sphere extends Shape {
     }
 
 
-    public static void main(String[] args){
-        Sphere s = new Sphere("C", 3.0);
-        System.out.println("Area of "+ s.getName()+" is "+s.getArea());
-    }
+    
 }
