@@ -35,11 +35,7 @@ public class Cylinder extends Shape {
         return Math.PI * radius * radius *height;
     }
 
-    public static void main(String[] args){
-        Cylinder c = new Cylinder("D", 3.0, 2.0);
-        System.out.println("Area of"+c.getName()+"is"+ c.getArea());
-
-    }
+    
 
 
 }

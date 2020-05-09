@@ -18,10 +18,7 @@ public class Circle extends Shape{
     public void zoom(double factor){
         radius = radius * factor;
     }
-    public static void main(String[] args){
-        Circle c = new Circle("A",3.0);
-        System.out.println("Area of"+c.getName()+"is"+ c.getArea());
-    }
+    
 
 
 }

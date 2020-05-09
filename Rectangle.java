@@ -32,10 +32,7 @@ public class Rectangle extends Shape{
         height = height * factor;
     }
 
-    public static void main(String[] args){
-        Rectangle r = new Rectangle("B", 2.0, 8.0);
-        System.out.println("Area of "+r.getName()+"is" + r.getArea());
-    }
+    
     
     
 
