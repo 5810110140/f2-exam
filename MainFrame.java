@@ -62,12 +62,7 @@ class MainFrame extends JFrame  {
 
         frame.setVisible(true);
 
-        ArrayList<Sprite> sprites = new ArrayList<Sprite>();
-         sprites.add(new Circle("A", 3.0));
-         sprites.add(new Rectangle("B", 2.0, 8.0));
-         sprites.add(new Sphere("C", 3.0));
-         sprites.add(new Cylinder("D", 3.0, 2.0));
-         sprites.add(new Cuboid("E", 2.0, 8.0, 3.0));
+    
 
 
     }
