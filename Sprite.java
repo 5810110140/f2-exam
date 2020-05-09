@@ -1,7 +1,7 @@
 public abstract class Sprite {
     private String name;
-    protected int x;
-    protected int y;
+    protected double x;
+    protected double y;
     
 
     public Sprite(String name){
@@ -10,10 +10,10 @@ public abstract class Sprite {
         y = 0;
     }
 
-    public int getX(){
+    public double getX(){
         return x;
     }
-    public int getY(){
+    public double getY(){
         return y;
     }
     public void moveTo(int x,int y){
